@@ -12,7 +12,7 @@ void token::transfer( account_name from,
     require_recipient( from );
     require_recipient( to );
 
-    eosio_assert( quantity.is_valid(), "invalid quantity" );
+    eosio_assert( quantity.is_valid(), "invalid quantity!" );
     eosio_assert( quantity.amount > 0, "must transfer positive quantity" );
     eosio_assert( quantity.symbol == st.supply.symbol, "symbol precision mismatch" );
     eosio_assert( memo.size() <= 256, "memo has more than 256 bytes" );
