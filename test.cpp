@@ -15,7 +15,7 @@ void token::transfer( account_name from,
     eosio_assert( quantity.is_valid(), "invalid quantity!" );
     eosio_assert( quantity.amount > 0, "must transfer positive quantity" );
     eosio_assert( quantity.symbol == st.supply.symbol, "symbol precision mismatc" );
-    eosio_assert( memo.size() <= 256, "memo has more than 256 bytes" );
+    eosio_assert( memo.size() <= 256, "memo has more than 256 byte" );
 
     auto payer = has_auth( to ) ? to : from;
 
