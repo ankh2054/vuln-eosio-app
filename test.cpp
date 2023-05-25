@@ -4,7 +4,7 @@ void token::transfer( account_name from,
                       string       memo )
 {
     eosio_assert( from != to, "cannot transfer to self" );
-    eosio_assert( is_account( to ), "to account does not exist");
+    eosio_assert( is_account( to ), "to account does not exists");
     auto sym = quantity.symbol.name();
     stats statstable( _self, sym );
     const auto& st = statstable.get( sym );
